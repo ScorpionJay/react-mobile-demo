@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <script>
+        /*响应式布局 start*/
+        function setRootFontSize() {
+            var width = document.documentElement.clientWidth, fontSize;
+            if (width > 750) {
+                width = 750;
+            }
+            fontSize = (width / 750 * 100);
+            document.getElementsByTagName('html')[0].style['font-size'] = fontSize + 'px';
+        }
+        setRootFontSize();
+        window.addEventListener('resize', function () {
+            setRootFontSize();
+        }, false);
+        /*响应式布局 end*/
+    </script>
+    
+</head>
+
+<body>
+    <div id='root'></div>
+</body>
+
+</html>
