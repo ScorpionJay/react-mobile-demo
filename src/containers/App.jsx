@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Provider } from "react-redux";
-import Main from "./Main";
+import Main from "./main";
 import configureStore  from "../store";
 import { hot } from "react-hot-loader";
 const store = configureStore();
