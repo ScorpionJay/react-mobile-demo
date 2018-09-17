@@ -2,9 +2,7 @@
  * 发现模块
  */
 import React, { Component } from "react";
-import { HashRouter as Router, Route, Link } from "react-router-dom";
-import { Button, WhiteSpace, WingBlank, NavBar, Icon } from "antd-mobile";
-import Nav from '../../components/Nav'
+import Nav from "../../components/Nav";
 import TabBar from "../../components/tabBar";
 import Carousel from "../../components/carousel";
 import Beat from "../../components/Beat";
@@ -30,14 +28,12 @@ class Discover extends Component {
   render() {
     const { banner } = this.props;
 
-    
-
     return (
       <div className="container">
         <div className="navBar">
           <Nav
             rightContent={<Beat key="0" beat={this.props.status} />}
-            name='首页'
+            name="首页"
           />
         </div>
         <div className="content">

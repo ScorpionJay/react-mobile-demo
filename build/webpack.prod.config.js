@@ -90,6 +90,7 @@ module.exports = merge(common, {
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
+        parallel: true,
         uglifyOptions: {
           compress: { warnings: false, drop_console: true },
           output: {
