@@ -1,0 +1,13 @@
+.lyric{
+    height: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    // justify-content: center;
+    overflow-y: scroll;
+    div{
+        // padding: .5rem 0;
+        color:#9e9c9b
+        
+    }
+}

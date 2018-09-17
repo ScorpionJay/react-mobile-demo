@@ -21,19 +21,36 @@ class ListExample extends React.Component {
   };
 
   render() {
+    let userInfo = sessionStorage.getItem("userInfo") || "{}";
+    try {
+      userInfo = JSON.parse(userInfo);
+    } catch (error) {
+      userInfo = {};
+    }
+
+    const { nickname = "", headimgurl = "" } = userInfo;
     return (
       <div>
+        <WhiteSpace />
+        <List>
+          <Item arrow="horizontal" extra={nickname}>
+            Name
+          </Item>
+          <Item
+            arrow="horizontal"
+            extra={headimgurl && <img src={headimgurl} />}
+          >
+            Picture
+          </Item>
+          <Item arrow="horizontal" extra={"extra content"}>
+            我的
+          </Item>
+        </List>
         <WhiteSpace />
         <List>
           <Item arrow="horizontal" extra={"extra content"}>
             我的
           </Item>
-          <Item arrow="horizontal" extra={"extra content"}>我的</Item>
-          <Item arrow="horizontal" extra={"extra content"}>我的</Item>
-        </List>
-        <WhiteSpace />
-        <List>
-          <Item arrow="horizontal" extra={"extra content"}>我的</Item>
           <Item extra={"extra content"}>我的</Item>
           <Item extra={"extra content"}>我的</Item>
         </List>

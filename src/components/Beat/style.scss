@@ -1,0 +1,58 @@
+$maxHeight: 0.4rem;
+$minHeight: 0.2rem;
+
+@keyframes beat {
+  from,
+  1%,
+  to {
+    height: $minHeight;
+  }
+  50% {
+    height: $maxHeight;
+  }
+  100% {
+    height: $minHeight;
+  }
+}
+
+@keyframes beat2 {
+  from,
+  1%,
+  to {
+    height: $maxHeight;
+  }
+  50% {
+    height: $minHeight;
+  }
+  100% {
+    height: $maxHeight;
+  }
+}
+
+.beat {
+  display: flex;
+  height: 0.4rem;
+  width: 0.7rem;
+  align-items: flex-end;
+  justify-content: space-around;
+
+  div {
+    background-color: #fff;
+    width: 0.04rem;
+  }
+
+  div:nth-child(odd) {
+    height: $maxHeight;
+  }
+
+  div:nth-child(even) {
+    height: $minHeight;
+  }
+}
+
+.t > div:nth-child(even) {
+  animation: beat 1s infinite;
+}
+.t > div:nth-child(odd) {
+  animation: beat2 1s infinite;
+}

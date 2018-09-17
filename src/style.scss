@@ -20,18 +20,19 @@ body {
   height: 100%;
   flex-direction: column;
 
-  .navBar{
+  .navBar {
     // height: 2rem;
     background-color: #999;
   }
 
-  .content{
+  .content {
     display: flex;
     flex-direction: column;
-    flex:1;
+    flex: 1;
     overflow: scroll;
   }
+}
 
-  
-
+.slider-list {
+  height: 4rem !important;
 }

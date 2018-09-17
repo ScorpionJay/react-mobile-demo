@@ -1,0 +1,21 @@
+.menu {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  // justify-items:center;
+  // align-items: center;
+  // align-content: stretch;
+  grid-gap: 0.1rem 0.6rem;
+  margin: 0.1rem 0.1rem;
+
+  > div {
+    text-align: center;
+    background-color: #555;
+    line-height: 1rem;
+    color: #fff;
+
+    > a {
+      color: #fff;
+    }
+  }
+}

@@ -55,7 +55,8 @@ module.exports = merge(common, {
                 plugins: [
                   require("autoprefixer")(),
                   require("cssnano")({
-                    preset: "default"
+                    preset: "default",
+                    reduceIdents: false
                   })
                 ]
               }

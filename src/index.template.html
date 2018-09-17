@@ -23,11 +23,15 @@
         }, false);
         /*响应式布局 end*/
     </script>
-    
+
 </head>
 
 <body>
     <div id='root'></div>
 </body>
+<!-- <%= htmlWebpackPlugin.options.common.bdtj %> -->
+<% htmlWebpackPlugin.options.common.forEach(item=>{ %>
+<%= item %>
+<% }); %>
 
 </html>

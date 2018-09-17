@@ -12,6 +12,7 @@ class CarouselComponent extends Component {
       // frameOverflow="visible"
       // cellSpacing={10}
       // slideWidth={0.8}
+      style={{height: '4rem'}}
       autoplay
       infinite
       // beforeChange={(from, to) => console.log(`slide from ${from} to ${to}`)}
@@ -20,7 +21,8 @@ class CarouselComponent extends Component {
       {data.map((item, index) => (
         <a
           key={index}
-          href="http://www.alipay.com"
+          href={item.url}
+          target="_blank"
           style={{
             display: "block",
             position: "relative",

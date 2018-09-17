@@ -3,6 +3,7 @@
  */
 
 const path = require("path");
+const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 
@@ -18,6 +19,14 @@ function generateHtml(name, title) {
     filename: `${name}.html`,
     // chunks: [`${name}`],
     inject: true,
+    common: [
+      `<script>${fs.readFileSync(
+        path.join(__dirname, "../src/utils/baidutongji.js")
+      )}</script>`,
+      `<script>${fs.readFileSync(
+        path.join(__dirname, "../src/utils/wxapi.js")
+      )}</script>`
+    ],
     minify:
       ENV === "production"
         ? {
@@ -47,7 +56,11 @@ module.exports = {
     Swiper: "Swiper"
   },
   resolve: {
-    extensions: [".jsx", ".js", ".scss"]
+    extensions: [".jsx", ".js", ".scss"],
+    alias: {
+      "@Components": path.resolve(__dirname, "../src/components/"),
+      Templates: path.resolve(__dirname, "src/templates/")
+    }
   },
   plugins: [
     new HtmlWebpackPlugin(generateHtml("index", "demo")),
