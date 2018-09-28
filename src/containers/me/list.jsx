@@ -13,9 +13,8 @@ import { createForm } from "rc-form";
 
 import React, { Component } from "react";
 const Item = List.Item;
-const Brief = Item.Brief;
 
-class ListExample extends React.Component {
+class ListExample extends Component {
   state = {
     disabled: false
   };
