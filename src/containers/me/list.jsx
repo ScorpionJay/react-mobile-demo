@@ -41,11 +41,11 @@ class ListExample extends Component {
           >
             Picture
           </Item>
-          <Item arrow="horizontal" extra={"extra content"}>
+          {/* <Item arrow="horizontal" extra={"extra content"}>
             我的
-          </Item>
+          </Item> */}
         </List>
-        <WhiteSpace />
+        {/* <WhiteSpace />
         <List>
           <Item arrow="horizontal" extra={"extra content"}>
             我的
@@ -53,8 +53,8 @@ class ListExample extends Component {
           <Item extra={"extra content"}>我的</Item>
           <Item extra={"extra content"}>我的</Item>
         </List>
-        <WhiteSpace />
-        <Button>退出</Button>
+        <WhiteSpace /> */}
+        {/* <Button>退出</Button> */}
       </div>
     );
   }

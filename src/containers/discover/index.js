@@ -7,6 +7,7 @@ import TabBar from "../../components/tabBar";
 import Carousel from "../../components/carousel";
 import Beat from "../../components/Beat";
 import Menu from "./component/menu";
+import Recommend from "./component/recommend";
 
 import { getBannerAction } from "./action";
 import { bindActionCreators } from "redux";
@@ -38,29 +39,8 @@ class Discover extends Component {
         </div>
         <div className="content">
           <Carousel data={banner} />
-
           <Menu />
-          {/* <h2>Mobile</h2>
-          <div>
-            <Link to="listview">listView</Link>
-          </div>
-          <div>
-            <Link to="list">list</Link>
-          </div>
-          <div>
-            <Link to="navBar">NavBar</Link>
-          </div>
-          <div>
-            <Link to="pullToRefresh">PullToRefresh</Link>
-          </div>
-          <div>
-            <Link to="listViewRefresh">ListViewRefresh</Link>
-            <br />
-            <Link to="ListViewRefreshDemo">ListViewRefreshDemo</Link>
-          </div>
-          <div>
-            <Link to="rank">音乐排行榜</Link>
-          </div> */}
+          <Recommend />
         </div>
         <TabBar />
       </div>

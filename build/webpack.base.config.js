@@ -76,7 +76,9 @@ module.exports = {
           name: "vendors",
           chunks: "all"
         }
-      }
+      },
+      // minSize: 30000,
+      // maxSize: 0
     },
     runtimeChunk: {
       name: "manifest"
