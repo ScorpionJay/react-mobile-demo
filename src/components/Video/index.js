@@ -13,7 +13,7 @@ import {
   BigPlayButton,
   PlayToggle,
   VolumeMenuButton
-} from "video-react";
+} from "./video-react";
 import "./style.scss";
 export default props => {
   return (
@@ -22,9 +22,9 @@ export default props => {
         <BigPlayButton position="center" />
         <ControlBar autoHide={false}>
           <PlayToggle />
-          <ReplayControl seconds={10} order={1.1} />
+          {/* <ReplayControl seconds={10} order={1.1} />
           <ForwardControl seconds={30} order={1.2} />
-          <CurrentTimeDisplay order={4.1} />
+          <CurrentTimeDisplay order={4.1} /> */}
           <TimeDivider order={4.2} />
           <PlaybackRateMenuButton rates={[5, 2, 1, 0.5, 0.1]} order={7.1} />
           <VolumeMenuButton vertical />
